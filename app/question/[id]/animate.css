@@ -1,0 +1,14 @@
+.appear {
+    transition: 0.2s;
+    animation: forwards 0.2s appear;
+    animation-delay: attr(data-delay time);
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

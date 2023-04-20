@@ -1,0 +1,14 @@
+{
+  "previous": "/scene/3",
+  "title": "O que o Skinner estudou???",
+  "answers": [
+    { "text": "Condicionamento Clássico", "isCorrect": false },
+    { "text": "Condicionamento Reforçado", "isCorrect": false },
+    { "text": "Os estimulos de um cachorro", "isCorrect": false },
+    {
+      "text": "Condicionamento Operante",
+      "isCorrect": true,
+      "nextPage": "/credits"
+    }
+  ]
+}
