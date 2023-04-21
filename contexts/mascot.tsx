@@ -5,8 +5,9 @@ interface MascotContextTypes {
   name: string;
   setName: (name: string) => void;
   life: number;
-  damage: () => void;
   pulse: boolean;
+  damage: () => void;
+  reset: () => void;
 }
 
 const MascotContext = createContext<MascotContextTypes>(
@@ -15,7 +16,7 @@ const MascotContext = createContext<MascotContextTypes>(
 
 export const MascotProvider = ({ children }: { children: ReactNode }) => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [name, setName] = useState<string>(
+  const [name, setMascotName] = useState<string>(
     typeof window !== 'undefined'
       ? localStorage.getItem('mascotName') ?? ''
       : '',
@@ -26,6 +27,9 @@ export const MascotProvider = ({ children }: { children: ReactNode }) => {
   const damage = () => {
     setLife(life => life - 1);
     setPulse(true);
+    audioRef.current?.pause();
+    if (typeof audioRef.current?.currentTime !== 'undefined')
+      audioRef.current.currentTime = 0;
     audioRef.current?.play();
 
     setTimeout(() => {
@@ -33,8 +37,20 @@ export const MascotProvider = ({ children }: { children: ReactNode }) => {
     }, 3000);
   };
 
+  const setName = (name: string) => {
+    setMascotName(name);
+    localStorage.setItem('mascotName', name);
+  };
+
+  const reset = () => {
+    setName('');
+    setLife(3);
+  };
+
   return (
-    <MascotContext.Provider value={{ name, setName, life, damage, pulse }}>
+    <MascotContext.Provider
+      value={{ name, setName, life, damage, pulse, reset }}
+    >
       <audio ref={audioRef} src='/sfx-punch.mp3' controls={false}></audio>
       {children}
     </MascotContext.Provider>
