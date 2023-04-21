@@ -16,7 +16,7 @@ export const ArrowButton = ({ nextPage, direction, ...props }: ButtonProps) => {
           setMaxPage(nextPage);
       }}
       className={`fixed ${
-        direction === 'right' ? 'right-4' : 'left-4'
+        direction === 'right' ? 'right-0 md:right-4' : 'left-0 md:left-4'
       } top-0 h-screen rounded-full hover:bg-slate-600/50 p-4 lg:p-10 flex items-center transition-colors`}
       {...props}
     >
