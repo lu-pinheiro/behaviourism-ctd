@@ -15,12 +15,12 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        sans: ['var(--font-poppins)', ...fontFamily.sans],
+        sans: ['var(--font-inter)', ...fontFamily.sans],
       },
       animation: {
         'pulse-fast': 'pulse 0.5s linear infinite',
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 };
