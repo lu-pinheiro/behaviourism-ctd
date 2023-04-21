@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { HtmlHTMLAttributes } from 'react';
 
-interface ParagraphProps {
+interface ParagraphProps extends HtmlHTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
 }
 
