@@ -6,8 +6,8 @@ import { Title } from '@/components/title';
 import { Type } from '@/components/type';
 import { Scene } from '@/types/scenes';
 import { redirect } from 'next/navigation';
+import { BASE_URL } from '@/utils/base-url';
 
-const BASE_URL = 'https://' + process.env.VERCEL_URL;
 
 export default async function ScenePage({
   params,

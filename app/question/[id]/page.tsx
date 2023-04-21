@@ -1,8 +1,8 @@
 import { redirect } from 'next/navigation';
 import { QuestionPage as QuestionPageComponent } from '@/components/question-page';
+import { BaseLayout } from '@/components/base-layout';
 import { AnswerResponse } from '@/types/answers';
-
-const BASE_URL = 'https://' + process.env.VERCEL_URL;
+import { BASE_URL } from '@/utils/base-url';
 
 export default async function QuestionPage({
   params,
@@ -18,8 +18,10 @@ export default async function QuestionPage({
   const sceneContent: AnswerResponse = await sceneRespose.json();
 
   return (
-    <main className='flex min-h-screen flex-col items-center justify-start gap-6 p-4 md:p-24 bg-slate-800 text-white'>
-      <QuestionPageComponent id={params.id} sceneContent={sceneContent} />
-    </main>
+    <BaseLayout>
+      <div className='h-full p-8 border-4 border-white rounded-md flex flex-col gap-6'>
+        <QuestionPageComponent id={params.id} sceneContent={sceneContent} />
+      </div>
+    </BaseLayout>
   );
 }
