@@ -9,6 +9,10 @@ export const Modal = () => {
   const { push } = useRouter();
   const { reset, life } = useMascot();
 
+  if (life === 3) {
+    return null;
+  }
+
   return (
     <>
       <div className={`modal ${life < 1 ? 'modal-open' : ''}`}>
