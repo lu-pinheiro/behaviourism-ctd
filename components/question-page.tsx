@@ -1,6 +1,6 @@
 'use client';
-import { useEffect } from 'react';
-import { redirect, useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/button';
 import { Mascot } from '@/components/mascot';
 import { Question } from '@/components/question';
@@ -9,18 +9,22 @@ import { Answer, AnswerResponse } from '@/types/answers';
 import { setMaxPage } from '@/utils/set-max-page';
 
 interface QuestionPageProps {
-  id: string;
+  questionId: number;
   sceneContent: AnswerResponse;
 }
 
-export const QuestionPage = ({ id, sceneContent }: QuestionPageProps) => {
-  const router = useRouter();
+export const QuestionPage = ({
+  questionId,
+  sceneContent,
+}: QuestionPageProps) => {
+  const [showPage, setShowPage] = useState(false);
+  const { replace, push } = useRouter();
   const { damage } = useMascot();
 
   const handleClick = (data: Answer) => {
     if (data.isCorrect) {
       setMaxPage(data.nextPage);
-      router.push(data.nextPage);
+      push(data.nextPage);
     } else {
       damage();
     }
@@ -28,12 +32,14 @@ export const QuestionPage = ({ id, sceneContent }: QuestionPageProps) => {
 
   useEffect(() => {
     const maxQuestionPage = localStorage.getItem('maxQuestionPage') ?? '0';
-    if (typeof maxQuestionPage === 'number' && Number(id) > maxQuestionPage) {
-      redirect(sceneContent.previous);
+    if (Number(questionId) > Number(maxQuestionPage)) {
+      replace(sceneContent.previous);
+      return;
     }
-  }, [id, sceneContent.previous]);
+    setShowPage(true);
+  }, [questionId, replace, sceneContent.previous]);
 
-  return (
+  return showPage ? (
     <>
       <Mascot />
       <Question title={sceneContent.title}>
@@ -44,5 +50,5 @@ export const QuestionPage = ({ id, sceneContent }: QuestionPageProps) => {
         ))}
       </Question>
     </>
-  );
+  ) : null;
 };

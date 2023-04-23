@@ -12,7 +12,7 @@ export default async function QuestionPage({
   const sceneRespose = await fetch(BASE_URL + '/api/question/' + params.id);
 
   if (sceneRespose.status >= 500 && Number(params.id) > 0) {
-    redirect(`/scene/${Number(params.id) - 1}`);
+    redirect('/');
   }
 
   const sceneContent: AnswerResponse = await sceneRespose.json();
@@ -20,7 +20,10 @@ export default async function QuestionPage({
   return (
     <BaseLayout>
       <div className='h-full p-8 border-4 border-white rounded-md flex flex-col gap-6'>
-        <QuestionPageComponent id={params.id} sceneContent={sceneContent} />
+        <QuestionPageComponent
+          questionId={Number(params.id)}
+          sceneContent={sceneContent}
+        />
       </div>
     </BaseLayout>
   );
