@@ -19,7 +19,7 @@ export const Modal = () => {
           </h3>
           <p className='py-4 flex items-center justify-center'>
             <Image
-              src='/duck-animate-sad.gif'
+              src='/mascot-lost.gif'
               width={400}
               height={400}
               alt='Seu mascote está triste, porque você perdeu.'
