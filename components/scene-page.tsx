@@ -17,7 +17,7 @@ export const ScenePage = ({ sceneContent, sceneId }: ScenePageProps) => {
   const { replace } = useRouter();
 
   useEffect(() => {
-    const maxScenePage = localStorage.getItem('maxScenePage') ?? '0';
+    const maxScenePage = localStorage.getItem('maxScenePage') ?? '1';
     if (sceneId > Number(maxScenePage)) {
       replace(sceneContent.previous);
       return;
