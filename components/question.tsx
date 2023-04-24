@@ -54,7 +54,7 @@ export const Question = ({ data }: QuestionProps) => {
         {removedRequestAnswer.map((text, index) =>
           index < removedRequestAnswer.length - 1 ? (
             <>
-              {text}{' '}
+              <span dangerouslySetInnerHTML={{ __html: text }}></span>{' '}
               <Input
                 required
                 className='h-fit py-2'

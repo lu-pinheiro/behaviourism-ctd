@@ -43,7 +43,6 @@ export const QuestionProvider = ({ children, questions }: Props) => {
 
   const closeMisModal = () => {
     setShowModal(s => ({ ...s, mis: false }));
-    console.log('lcjalsf', showModal);
   };
 
   const openMisModal = () => {

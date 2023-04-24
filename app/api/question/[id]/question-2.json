@@ -3,16 +3,28 @@
   "title": "",
   "questions": [
     {
-      "question": "O Behaviorismo é uma teoria que estuda essencialmente o request_answer.",
-      "correctAnswers": ["comportamento"]
+      "question": "O estímulo incondicionado é aquele que irá gerar uma resposta request_answer. Por exemplo, a salivação é a resposta para a apresentação da comida.",
+      "correctAnswers": ["natural/involuntária"]
     },
     {
-      "question": "Para esta teoria, os comportamentos podem ser aprendidos e modificados por meio do request_answer.",
-      "correctAnswers": ["condicionamento"]
+      "question": "No condicionamento clássico, apresenta-se um estímulo request_answer junto com o estímulo condicionado.",
+      "correctAnswers": ["neutro"]
     },
     {
-      "question": "O processo de condicionamento inicia com um request_answer que irá gerar uma request_answer específica.",
-      "correctAnswers": ["estímulo", "resposta"]
+      "question": "Com o tempo, o estímulo neutro começa a gerar a mesma request_answer que o estímulo condicionado.",
+      "correctAnswers": ["resposta"]
+    },
+    {
+      "question": "No experimento dos Cães de Pavlov, a comida é o estímulo request_answer e campainha é o estímulo request_answer.",
+      "correctAnswers": ["incondicionado", "neutro"]
+    },
+    {
+      "question": "No experimento do pequeno Albert, o rato branco é o estímulo request_answer e o som alto é o estímulo request_answer.",
+      "correctAnswers": ["neutro", "incondicionado"]
+    },
+    {
+      "question": "O condicionamento clássico se dá por meio da request_answer de estímulos.",
+      "correctAnswers": ["associação"]
     }
   ],
   "nextPage": "/scene/5"

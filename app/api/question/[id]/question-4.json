@@ -1,0 +1,15 @@
+{
+  "previous": "/scene/8",
+  "title": "",
+  "questions": [
+    {
+      "question": "No vídeo a seguir <a class=\"link underline\" href=\"https://twitter.com/GyldaOrsi/status/1647611341426003973?t=SWWJPhJtrg1GJvR9Y8PjzA&s=08\" target=\"_blank\" rel=\"noopener noreferrer\">(clique aqui para ver o vídeo)</a> podemos observar que o pai quer diminuir/extinguir o comportamento do filho de chupar o dedo enquanto assiste desenhos animados. Para isso criou um sistema que pausa o desenho assim que a criança coloca o dedo na boca. Nessa situação temos um claro exemplo de request_answer.",
+      "correctAnswers": ["punição negativa"]
+    },
+    {
+      "question": "No vídeo a seguir <a class=\"link underline\" href=\"https://www.youtube.com/watch?v=C1i0Os8WEG4\" target=\"_blank\" rel=\"noopener noreferrer\">(clique aqui para ver o vídeo)</a>, o personagem Sheldon se incomoda com algumas atitudes da personagem Penny, portanto resolve recompensá-la com um chocolate quando ela tem algum comportamento que ele considera apropriado. Nessa situação temos um claro exemplo de request_answer.",
+      "correctAnswers": ["reforço positivo"]
+    }
+  ],
+  "nextPage": "/win"
+}

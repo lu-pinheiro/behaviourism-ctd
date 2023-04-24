@@ -40,7 +40,7 @@ export const QuestionPage = ({
             key={data.question}
             className={`animate__animated animate__fadeIn${
               index % 2 === 0 ? 'Left' : 'Right'
-            } animate__delay-${index * 0.5}s`}
+            } animate__delay-${index * 1}s`}
           >
             <Question data={data} />
           </div>

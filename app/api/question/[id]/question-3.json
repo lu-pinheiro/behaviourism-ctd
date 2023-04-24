@@ -1,0 +1,39 @@
+{
+  "previous": "/scene/6",
+  "title": "",
+  "questions": [
+    {
+      "question": "O condicionamento operante se dá por meio das consequências de cada comportamento, ele pode ser incentivado ou reprimido por meio de request_answer ou request_answer.",
+      "correctAnswers": ["reforços", "punições"]
+    },
+    {
+      "question": "Reforços são estímulos que que têm como objetivo a request_answer de um comportamento.",
+      "correctAnswers": ["manutenção"]
+    },
+    {
+      "question": "Punições são estímulos que têm como objetivo o a request_answer e um comportamento.",
+      "correctAnswers": ["extinção"]
+    },
+    {
+      "question": "Se uma pessoa está com dor de cabeça e toma um analgésico, a dor diminui, o que é um exemplo de reforço request_answer. A pessoa, portanto, é mais propensa a tomar analgésicos no futuro quando estiver com dor de cabeça.",
+      "correctAnswers": ["negativo"]
+    },
+    {
+      "question": "Quando os pais dão um doce para uma criança que arrumou seu quarto, temos um reforço request_answer.",
+      "correctAnswers": ["positivo"]
+    },
+    {
+      "question": "A punição é uma consequência que request_answer a probabilidade de um comportamento.",
+      "correctAnswers": ["diminui"]
+    },
+    {
+      "question": "Quando um criança desobedece uma regra e recebe um castigo, temos uma punição request_answer.",
+      "correctAnswers": ["positiva"]
+    },
+    {
+      "question": "Quando um adolescente chega em casa após o horário combinado e os pais o proíbem de sair à noite, temos uma punição request_answer.",
+      "correctAnswers": ["negativa"]
+    }
+  ],
+  "nextPage": "/scene/7"
+}
