@@ -33,7 +33,9 @@ export const Question = ({ data }: QuestionProps) => {
     event.preventDefault();
     if (isDisable) return;
     const allAnswersIsCorrect = data.correctAnswers.every(
-      (answer, index) => answer.trim() === fieldsValues[index].trim(),
+      (answer, index) =>
+        answer.trim().toLowerCase() ===
+        fieldsValues[index].trim().toLowerCase(),
     );
 
     if (allAnswersIsCorrect) {
