@@ -7,11 +7,11 @@
       "correctAnswers": ["involuntária"]
     },
     {
-      "question": "No condicionamento clássico, apresenta-se um estímulo request_answer junto com o estímulo condicionado.",
+      "question": "No condicionamento clássico, apresenta-se um estímulo request_answer junto com o estímulo incondicionado.",
       "correctAnswers": ["neutro"]
     },
     {
-      "question": "Com o tempo, o estímulo neutro começa a gerar a mesma request_answer que o estímulo condicionado.",
+      "question": "Com o tempo, o estímulo neutro começa a gerar a mesma request_answer que o estímulo incondicionado.",
       "correctAnswers": ["resposta"]
     },
     {
