@@ -32,9 +32,18 @@ export const QuestionPage = ({
   return showPage ? (
     <QuestionProvider questions={sceneContent.questions}>
       <>
-        <Mascot />
-        {sceneContent.questions.map(data => (
-          <Question key={data.question} data={data} />
+        <div className='animate__animated animate__rollIn'>
+          <Mascot />
+        </div>
+        {sceneContent.questions.map((data, index) => (
+          <div
+            key={data.question}
+            className={`animate__animated animate__fadeIn${
+              index % 2 === 0 ? 'Left' : 'Right'
+            } animate__delay-${index * 0.5}s`}
+          >
+            <Question data={data} />
+          </div>
         ))}
         <ModalWin nextPage={sceneContent.nextPage} />
         <ModalMis />

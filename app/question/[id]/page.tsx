@@ -19,7 +19,7 @@ export default async function QuestionPage({
 
   return (
     <BaseLayout>
-      <div className='h-full p-8 border-4 border-white rounded-md flex flex-col gap-6'>
+      <div className='h-full p-8 border-4 border-white rounded-md flex flex-col gap-6 overflow-x-hidden'>
         <QuestionPageComponent
           questionId={Number(params.id)}
           sceneContent={sceneContent}

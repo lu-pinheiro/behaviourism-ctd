@@ -23,14 +23,14 @@ const createContent = (sceneContent: Scene['content'], mascotName: string) => {
   if (hasMascotName) {
     return sceneContent.map(text => (
       <Paragraph key={text} className='my-1 text-xl'>
-        <span>{text.replace(/mascot_name/gi, mascotName)}</span>
+        <Type>{text.replace(/mascot_name/gi, mascotName)}</Type>
       </Paragraph>
     ));
   }
 
   return sceneContent.map(text => (
     <Paragraph className='my-2' key={text}>
-      {text}
+      <Type>{text}</Type>
     </Paragraph>
   ));
 };
@@ -63,8 +63,8 @@ export const ScenePage = ({ sceneContent, sceneId }: ScenePageProps) => {
           />
 
           {sceneContent?.title && (
-            <Title>
-              <Type>{sceneContent.title}</Type>
+            <Title className='animate__animated animate__fadeInLeft'>
+              {sceneContent.title}
             </Title>
           )}
 
