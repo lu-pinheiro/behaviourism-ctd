@@ -4,7 +4,7 @@
   "questions": [
     {
       "question": "O estímulo incondicionado é aquele que irá gerar uma resposta request_answer. Por exemplo, a salivação é a resposta para a apresentação da comida.",
-      "correctAnswers": ["natural/involuntária"]
+      "correctAnswers": ["involuntária"]
     },
     {
       "question": "No condicionamento clássico, apresenta-se um estímulo request_answer junto com o estímulo condicionado.",
