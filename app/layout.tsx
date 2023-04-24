@@ -1,8 +1,8 @@
 import { Inter } from 'next/font/google';
 import { MascotProvider } from '@/contexts/mascot';
-import './globals.css';
-import { AnimationProvider } from '@/contexts/animation-provider';
 import { Modal } from '@/components/modal';
+import './globals.css';
+import 'animate.css';
 
 export const metadata = {
   title: 'Behaviorismo - CTD',
@@ -23,12 +23,10 @@ export default function RootLayout({
   return (
     <html lang='pt-br' className={`${inter.variable} font-sans`}>
       <body>
-        <AnimationProvider>
-          <MascotProvider>
-            <Modal />
-            {children}
-          </MascotProvider>
-        </AnimationProvider>
+        <MascotProvider>
+          <Modal />
+          {children}
+        </MascotProvider>
       </body>
     </html>
   );
