@@ -21,7 +21,7 @@ export const ModalMis = (props: Props) => {
         <div className='modal-box w-11/12 max-w-5xl'>
           <h3 className='font-bold text-4xl flex gap-4 items-center text-slate-800'>
             <XCircle height='50' width='50' className='h-full text-red-500' />{' '}
-            Você errou. O(a) {name} tem {life} tentativa(s).
+            Você errou. Você tem {life} tentativa(s).
           </h3>
           <picture className='flex items-center justify-center'>
             <Image
