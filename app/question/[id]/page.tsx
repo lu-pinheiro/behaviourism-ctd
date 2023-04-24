@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { QuestionPage as QuestionPageComponent } from '@/components/question-page';
 import { BaseLayout } from '@/components/base-layout';
-import { AnswerResponse } from '@/types/answers';
+import { QuestionResponse } from '@/types/question';
 import { BASE_URL } from '@/utils/base-url';
 
 export default async function QuestionPage({
@@ -15,7 +15,7 @@ export default async function QuestionPage({
     redirect('/');
   }
 
-  const sceneContent: AnswerResponse = await sceneRespose.json();
+  const sceneContent: QuestionResponse = await sceneRespose.json();
 
   return (
     <BaseLayout>
