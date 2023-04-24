@@ -1,16 +1,16 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from '@/components/button';
 import { Mascot } from '@/components/mascot';
 import { Question } from '@/components/question';
-import { useMascot } from '@/contexts/mascot';
-import { Answer, AnswerResponse } from '@/types/answers';
-import { setMaxPage } from '@/utils/set-max-page';
+import { ModalWin } from '@/components/modal-win';
+import { ModalMis } from '@/components/modal-mis';
+import { QuestionResponse } from '@/types/question';
+import { QuestionProvider } from '@/contexts/question';
 
 interface QuestionPageProps {
   questionId: number;
-  sceneContent: AnswerResponse;
+  sceneContent: QuestionResponse;
 }
 
 export const QuestionPage = ({
@@ -18,17 +18,7 @@ export const QuestionPage = ({
   sceneContent,
 }: QuestionPageProps) => {
   const [showPage, setShowPage] = useState(false);
-  const { replace, push } = useRouter();
-  const { damage } = useMascot();
-
-  const handleClick = (data: Answer) => {
-    if (data.isCorrect) {
-      setMaxPage(data.nextPage);
-      push(data.nextPage);
-    } else {
-      damage();
-    }
-  };
+  const { replace } = useRouter();
 
   useEffect(() => {
     const maxQuestionPage = localStorage.getItem('maxQuestionPage') ?? '0';
@@ -40,15 +30,15 @@ export const QuestionPage = ({
   }, [questionId, replace, sceneContent.previous]);
 
   return showPage ? (
-    <>
-      <Mascot />
-      <Question title={sceneContent.title}>
-        {sceneContent.answers.map(data => (
-          <Button key={data.text} onClick={() => handleClick(data)}>
-            {data.text}
-          </Button>
+    <QuestionProvider questions={sceneContent.questions}>
+      <>
+        <Mascot />
+        {sceneContent.questions.map(data => (
+          <Question key={data.question} data={data} />
         ))}
-      </Question>
-    </>
+        <ModalWin nextPage={sceneContent.nextPage} />
+        <ModalMis />
+      </>
+    </QuestionProvider>
   ) : null;
 };
