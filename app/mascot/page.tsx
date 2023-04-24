@@ -48,8 +48,7 @@ export default function Maskot() {
           <Paragraph className='text-center md:text-2xl font-normal'>
             <Type
               options={{
-                startDelay: 2750,
-                speed: 25,
+                startDelay: 2750 * 3,
               }}
             >
               No entanto, ainda não demos um nome pra ele, você poderia nos
