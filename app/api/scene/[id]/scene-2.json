@@ -1,13 +1,8 @@
 {
-  "previous": "/scene/1",
-  "title": "Condicionamento clássico",
-  "youtube_link": "https://www.youtube.com/embed/8EvbMC7Shrc",
-  "youtube_title": "Explicação do Condicionamento clássico.",
+  "previous": "/mascot",
   "content": [
-    "Foi descrito pela primeira vez pelo fisiologista russo Ivan Pavlov dentro da tradição objetivista-reflexológica. Para a abordagem reflexológica, o condicionamento era basicamente um método experimental que permitia a criação de novos reflexos que enriqueciam a atividade nervosa superior (Pérez, Cruz, 2003).",
-    "Nesse tipo de condicionamento, a resposta que um organismo exibe automaticamente diante de um determinado estímulo é transferida para um novo estímulo por meio de uma associação entre os dois (Sarason e Sarason, 2006).",
-    "Por exemplo, no experimento com cães de Pavlov, eles salivaram (resposta incondicionada) diante da presença de comida (estímulo incondicionado), mas não na presença de um estímulo neutro (toque de um sino). Porém, uma vez que os cães associaram o som do sino à comida, eles conseguiram salivar (resposta condicionada) apenas por ouvir o som do sino (estímulo condicionado).",
-    "O condicionamento clássico se baseia no que poderíamos chamar de aprendizagem de sinais. Um sinal é um estímulo externo ou interno que antecipa ou prediz, com certo grau de confiabilidade, um evento geralmente significativo (Sánchez, Ortega e de la Casa Rivas, 2008)."
+    "Agora que você aprendeu sobre a relação entre condicionamento e behaviorismo, preencha as lacunas abaixo com as palavras que faltam para completar corretamente as afirmações.",
+    "Sempre que você preencher corretamente, mascot_name receberá uma recompensa. Caso você erre, ele ficara com fome. Se você errar mais que três vezes, você será punido com a perda do mascot_name."
   ],
-  "next": "/scene/3"
+  "next": "/question/1"
 }
