@@ -6,6 +6,8 @@ import { Input } from '@/components/input';
 import { Mascot } from '@/components/mascot';
 import { BaseLayout } from '@/components/base-layout';
 import { Paragraph } from '@/components/paragraph';
+import { Type } from '@/components/type';
+import { Title } from '@/components/title';
 import { useMascot } from '@/contexts/mascot';
 
 export default function Maskot() {
@@ -27,18 +29,46 @@ export default function Maskot() {
 
   return (
     <BaseLayout>
-      <div className='h-full p-8 border-4 border-white rounded-md flex flex-col gap-6'>
-        <Paragraph className='text-center md:text-2xl font-normal'>
-          Para começarmos nossa jornada de entendimento sobre o behaviorismo,
-          essa pequena criatura será nossa companheira e aliada. No entanto,
-          ainda não decidimos qual nome dar a ela. Você teria alguma sugestão?
-        </Paragraph>
-        <div className={loading ? 'opacity-75 animate-pulse' : ''}>
+      <section className='h-full p-8 border-4 border-white rounded-md flex flex-col items-center gap-6 overflow-x-hidden'>
+        <Title className='animate__animated animate__backInDown'>
+          Você sabe o que é condicionamento?
+        </Title>
+        <div className='flex flex-col gap-6'>
+          <Paragraph className='text-center md:text-2xl font-normal'>
+            <Type
+              options={{
+                startDelay: 500,
+              }}
+            >
+              Vem com a gente nessa jornada que a gente te conta! E, pra você
+              não se sentir sozinho, você terá esse bichinho como companheiro de
+              caminhada.
+            </Type>
+          </Paragraph>
+          <Paragraph className='text-center md:text-2xl font-normal'>
+            <Type
+              options={{
+                startDelay: 2750,
+                speed: 25,
+              }}
+            >
+              No entanto, ainda não demos um nome pra ele, você poderia nos
+              ajudar?
+            </Type>
+          </Paragraph>
+        </div>
+        <div
+          className={
+            loading
+              ? 'opacity-75 animate-pulse'
+              : 'animate__animated animate__bounceInLeft'
+          }
+        >
           <Mascot />
         </div>
         <form
           onSubmit={setMascotName}
-          className='flex flex-col gap-4 justify-center items-center'
+          className='flex flex-col gap-4 justify-center items-center animate__animated animate__backInRight'
         >
           <Input
             className={loading ? 'opacity-75 animate-pulse delay-100' : ''}
@@ -56,7 +86,7 @@ export default function Maskot() {
             Nomear
           </Button>
         </form>
-      </div>
+      </section>
     </BaseLayout>
   );
 }
