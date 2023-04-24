@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { Confetti } from '@/components/confetti';
 import { setMaxPage } from '@/utils/set-max-page';
 import { useQuestion } from '@/contexts/question';
 
@@ -22,6 +23,7 @@ export const ModalWin = ({ nextPage }: Props) => {
 
   return (
     <>
+      <Confetti />
       <div id='win-modal' className={`modal modal-open`}>
         <div className='modal-box w-11/12 max-w-5xl'>
           <h3 className='font-bold text-4xl flex gap-4 items-center text-slate-800'>
