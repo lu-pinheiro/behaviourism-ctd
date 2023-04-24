@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='pt-br' className={`${inter.variable} font-sans`}>
-      <body>
+      <body className='overflow-x-hidden'>
         <MascotProvider>
           <Modal />
           {children}
